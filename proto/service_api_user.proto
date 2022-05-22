@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package proto;
+
+import "user/rpc_create.proto";
+import "role/rpc_create.proto";
+
+option go_package = "github.com/DeniesKresna/jhapi2-user/pb";
+
+service ApiUser {
+    rpc CreateUser (user.CreateUserRequest) returns (user.CreateUserResponse);
+    rpc CreateRole (role.CreateRoleRequest) returns (role.CreateRoleResponse);
+}

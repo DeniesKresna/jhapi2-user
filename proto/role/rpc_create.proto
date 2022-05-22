@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package role;
+
+import "role/rpc_data.proto";
+
+option go_package = "github.com/DeniesKresna/jhapi2-user/pb/role";
+
+message CreateRoleRequest {
+    string name = 1;
+}
+
+message CreateRoleResponse {
+    Role role = 1;
+}
